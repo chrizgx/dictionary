@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="/components.js" defer></script>
+    <script src="/app.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body class="">
+    <div id="app">
+        <nav>
+            <!-- <img src="/logo" alt="logo">
+            <div>
+                <p>SERIF - DARKMODE</p>
+            </div> -->
+        </nav>
+        <button id="resetFocusButton" style="display: none;">reset</button>
+        <div class="search-bar" id="searchBar">
+            <input id="searchInput" v-model="searchTerm" type="text" placeholder="Type a word...">
+            <button id="searchButton" @click="update(searchTerm)"> Search </button>
+        </div>
+        <div id="resultsContainer" class="results-container" :class="{ updating: updateStatus }">
+            <div v-if="results.length">
+                <p id="searchWord" class="search-word">{{ results[0].word }}</p>
+                <p class="pronunciation">{{ results[0].phonetic }}</p>
+                <results    v-for="meaning in results[0].meanings"
+                            v-bind:part-of-speech="meaning.partOfSpeech"
+                            v-bind:definitions="meaning.definitions"
+                            v-bind:synonyms="meaning.synonyms"
+                            v-bind:antonyms="meaning.antonyms"></results>
+            </div>
+            <div v-if="!results.length">
+                <p>NOT FOUND</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
