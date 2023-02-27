@@ -79,9 +79,9 @@ nav {
 }
 
 .search-bar:focus-within {
-    outline: 4px var(--color-highlighted-txt) solid;
+    outline: 2px var(--color-highlighted-txt) solid;
     outline-offset: 0px;
-    transition-duration: 0.25s;
+    transition-duration: 0s;
 }
 
 /* Results Container for animation when switching word results */

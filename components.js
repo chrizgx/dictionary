@@ -18,8 +18,8 @@ const Results = Vue.component('results', {
             <ul>
             <meaning v-for="definition in definitions" v-bind:sentence="definition.definition"></meaning>
             </ul>
-            <p v-if="synonyms.length" class="syno-anto-container"><span class="syno-anto-span">Synonyms</span> <span class="syno-anto-content">{{ synonyms.toString() }}</span></p>
-            <p v-if="antonyms.length" class="syno-anto-container"><span class="syno-anto-span">Antonyms</span> <span class="syno-anto-content">{{ antonyms.toString() }}</span></p>
+            <p v-if="synonyms.length" class="syno-anto-container"><span class="syno-anto-span">Synonyms</span> <span class="syno-anto-content">{{ synonyms.join(', ') }}</span></p>
+            <p v-if="antonyms.length" class="syno-anto-container"><span class="syno-anto-span">Antonyms</span> <span class="syno-anto-content">{{ antonyms.join(', ) }}</span></p>
         </div>
     `
 });
