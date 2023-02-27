@@ -1,13 +1,3 @@
-const Synonyms = Vue.component('synonyms', {
-    props: ['words'],
-    template: '<div class="synonyms"><p>Synonyms</p><p>{{ words.toString() }}</p></div>'
-});
-
-const Antonyms = Vue.component('antonyms', {
-    props: ['words'],
-    template: '<div class="antonyms"><p>Antonyms</p><p>{{ words.toString() }}</p></div>'
-});
-
 const Meaning = Vue.component('meaning', {
     props: ['sentence'],
     template: `

@@ -41,9 +41,9 @@ nav {
     justify-content: space-between;
     background-color: var(--color-searchbar-bg);
     border-radius: 10px;
-    outline: 15px #0000 solid; /*PREPARE FOR COLOR TRANSITION ON FOCUS WITHIN*/
+    outline: 2000px #0000 solid; /*PREPARE FOR COLOR TRANSITION ON FOCUS WITHIN*/
     padding: 0.25rem 0.5rem 0.25rem 1rem;
-    transition-duration: 0.17s;
+    transition-duration: 1s;
 }
 
 .search-bar input {
@@ -63,6 +63,7 @@ nav {
     color: var(--color-highlighted-txt);
     font-style: italic;
     font-size: 1rem;
+    font-weight: bold;
     margin: 0.1rem 0;
     outline: none;
     transition-duration: 0.15s;
@@ -78,8 +79,9 @@ nav {
 }
 
 .search-bar:focus-within {
-    outline: 2px var(--color-highlighted-txt) solid;
+    outline: 4px var(--color-highlighted-txt) solid;
     outline-offset: 0px;
+    transition-duration: 0.25s;
 }
 
 /* Results Container for animation when switching word results */
